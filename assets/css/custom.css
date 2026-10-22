@@ -1,0 +1,61 @@
+/* Estilos Customizados & Animações para o Timer de Provas */
+
+@keyframes pulse-subtle {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.02);
+        opacity: 0.95;
+    }
+}
+
+@keyframes pulse-alert {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.6);
+        border-color: #ef4444;
+    }
+    50% {
+        box-shadow: 0 0 0 20px rgba(239, 68, 68, 0);
+        border-color: #dc2626;
+    }
+}
+
+@keyframes flash-screen {
+    0%, 100% {
+        background-color: transparent;
+    }
+    50% {
+        background-color: rgba(239, 68, 68, 0.25);
+    }
+}
+
+.animate-pulse-subtle {
+    animation: pulse-subtle 2s infinite ease-in-out;
+}
+
+.animate-pulse-alert {
+    animation: pulse-alert 1.2s infinite ease-in-out;
+}
+
+.screen-flash {
+    animation: flash-screen 0.8s 3 ease-in-out;
+}
+
+/* Tipografia de dígitos de display digital */
+.timer-digits {
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.04em;
+}
+
+/* Transições suaves */
+.transition-smooth {
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Ocultar barra de rolagem em modo tela cheia */
+.fullscreen-mode {
+    background-color: #0f172a !important;
+    overflow: hidden;
+}
